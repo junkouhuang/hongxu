@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>广西弘旭科技有限公司</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/timeline.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="top-fix">
+			<div class="container">
+				<div class="navbar-header page-scroll collapse_btn">
+					<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
+						<img logo page-scroll src="images/logo.jpg">
+					</div>
+				</div>
+				<div id="logo2" class="logo pull-left">
+					<img logo page-scroll src="images/logo.jpg">
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="page-scroll" href="index.html"><span class="navItemIcon iconfont" style="display:none">&#xe73a;</span>首页</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="product.html"><span class="navItemIcon iconfont" style="display:none">&#xe601;</span>产品</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="brand.html"><span class="navItemIcon iconfont" style="display:none">&#xe611;</span>合作展示</a>
+						</li>
+						<li class="current">
+							<a class="page-scroll" href="about.html"><span class="navItemIcon iconfont active" style="display:none">&#xe600;</span>关于我们</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="contact.html"><span class="navItemIcon iconfont" style="display:none">&#xe61c;</span>联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<section class="header">
+			<div class="bg">
+				<img src="images/about-top.png" alt="">
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="product-title">
+					<h3 class="text-center">关于弘旭</h3>
+					<div class="line-style text-center">
+						<img src="images/line.png">
+					</div>
+				</div>
+				<p class="about-us wow fadeInUp">
+					&nbsp;&nbsp;&nbsp;&nbsp;广西弘旭科技有限公司主要经营电子监控设备的开发、销售、安装及维护；多媒体教学设备、音响设备的销售、安装及维护；计算机信息系统的设计、集成、安装及维护；弱电系统工程设计、安装及维护；销售电子产品与智能化设备等。总公司于2014年07月14日在佛山市禅城区工商行政管理局注册成立，注册资本为1000万人民币元，在公司发展壮大的5年里业务扩展至广西成立了分公司广西弘旭科技有限公司。公司拥有自己的施工团队和专业的技术人员。公司秉承“客户为尊、服务为荣、创意为先、技术为实”的经营理念，恪守“共创、共享、共赢”的企业精神，奉行“知人善任、人尽其才”的人才理念，通过开放式创新、卓越运营管理、人力资源发展等战略的实施，以一流的服务、一流的技术和一流的产品，全面打造公司的核心竞争力，成就最优秀的行业品牌，提供最有价值的行业服务。
+					<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;截至2019年5月，弘旭服务商户已超过1000家，会员总量近千万，日均活跃会员10万+。全面覆盖华南地区知名智能家居品牌及全国标杆文旅综合体项目。
+				</p>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row footer-logo text-center">
+					
+				</div>
+			</div>
+			<div class="footer-copyright text-center">
+				广西弘旭科有限公司版权所有<a style="color: #7dc7ec;text-decoration: none;" href="http://www.miitbeian.gov.cn/" target="_blank">桂ICP备15038543号</a>CopyRight©2019 All right reserved
+			</div>
+		</footer>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/cookieUtils.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			/*动画加载效果*/
+			new WOW().init();
+			$(function() {
+				$(".hover-img").hover(
+					function() {
+						$(this).children(".train-bg").addClass('train-hide');
+						$(this).children(".detail").removeClass('train-hide');
+					},
+					function() {
+						$(this).children(".train-bg").removeClass('train-hide');
+						$(this).children(".detail").addClass('train-hide');
+					}
+				)
+
+				$(".invest-group").hover(
+					function() {
+						$(this).addClass("invest-group-hover");
+					},
+					function() {
+						$(this).removeClass("invest-group-hover");
+					}
+				)
+
+				$("#navbar li a").bind("click", function() {
+					$("#navbar li").removeClass("current");
+					$(this).parent().addClass("current");
+				})
+			})
+		</script>
+	</body>
+
+</html>

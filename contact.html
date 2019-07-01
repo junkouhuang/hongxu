@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>广西弘旭科技有限公司</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="top-fix">
+			<div class="container">
+				<div class="navbar-header page-scroll collapse_btn">
+					<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
+						<img logo page-scroll src="images/logo.jpg">
+					</div>
+				</div>
+				<div id="logo2" class="logo pull-left">
+					<img logo page-scroll src="images/logo.jpg">
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="page-scroll" href="index.html"><span class="navItemIcon iconfont" style="display:none">&#xe73a;</span>首页</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="product.html"><span class="navItemIcon iconfont" style="display:none">&#xe601;</span>产品</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="brand.html"><span class="navItemIcon iconfont" style="display:none">&#xe611;</span>合作展示</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="about.html"><span class="navItemIcon iconfont" style="display:none">&#xe600;</span>关于我们</a>
+						</li>
+						<li class="current">
+							<a class="page-scroll" href="contact.html"><span class="navItemIcon iconfont active" style="display:none">&#xe61c;</span>联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<section class="header">
+			<div class="bg">
+				<img src="images/contact-top.jpg" alt="">
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="product-title">
+					<h3 class="text-center">商务合作</h3>
+					<div class="line-style text-center">
+						<img src="images/line.png">
+					</div>
+				</div>
+				<div class="row icon-list">
+					<div class="col-md-6 text-center contact-icon wow fadeInLeft">
+						<img src="images/contact-location.png" alt="">
+						<p>广西玉林玉州区名山街道</p>
+						<p>旺瑶社区岭头24号</p>
+					</div>
+					<div class="col-md-6 text-center contact-icon wow fadeInRight">
+						<!--<img src="images/contact-phone.png" alt="">
+						<p>400－820－6372</p>-->
+						<div class="text-center contact-core wow fadeInUp">
+							<img src="images/core.jpg" class="qrcode">
+						</div>
+						<div class="text-center contact-state wow fadeInUp">
+							<p>扫码添加微信</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="point-system W-topb W-topb"  style="margin-top: 40px;">
+					<h4 class="text-center">地图</h4>
+				</div>
+				<div id="allmap" class="wow fadeInUp">
+				
+
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row footer-logo text-center">
+					
+				</div>
+			</div>
+			<div class="footer-copyright text-center">
+				广西弘旭科有限公司版权所有<a style="color: #7dc7ec;text-decoration: none;" href="http://www.miitbeian.gov.cn/" target="_blank">桂ICP备15038543号</a>CopyRight©2019 All right reserved
+			</div>
+		</footer>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rcDmW3ROAQeZnas0GMjiDgucezjPqX1x"></script>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/cookieUtils.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			/*动画加载效果*/
+			new WOW().init();
+
+			/*百度地图API功能*/
+			var map = new BMap.Map("allmap");
+			var point = new BMap.Point(110.186854, 22.637077);
+			var marker = new BMap.Marker(point); // 创建标注
+			map.centerAndZoom(point, 15);
+			var myIcon = new BMap.Icon("./images/loc-icon.png", new BMap.Size(24, 30), {
+				offset: new BMap.Size(10, 25)
+			});
+			var marker = new BMap.Marker(point, {
+				icon: myIcon
+			});
+			map.addOverlay(marker)
+			var opts = {
+				width: 200, // 信息窗口宽度
+				height: 100, // 信息窗口高度
+				title: "广西弘旭科技有限公司", // 信息窗口标题
+				enableMessage: true, //设置允许信息窗发送短息
+				message: "广西玉林玉州区名山街道旺瑶社区岭头24号"
+			}
+			var infoWindow = new BMap.InfoWindow("地址：广西玉林玉州区名山街道旺瑶社区岭头24号", opts); // 创建信息窗口对象
+			marker.addEventListener("click", function() {
+				map.openInfoWindow(infoWindow, point); //开启信息窗口
+			});
+
+			$("#navbar li a").bind("click", function() {
+				$("#navbar li").removeClass("current");
+				$(this).parent().addClass("current");
+			})
+		</script>
+	</body>
+
+</html>
