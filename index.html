@@ -27,11 +27,11 @@
                     <span class="icon-bar"></span>
                 </button>
 					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
-						<img logo page-scroll src="images/logo.jpg">
+						
 					</div>
 				</div>
 				<div id="logo2" class="logo pull-left">
-					<img logo page-scroll src="images/logo.jpg">
+					
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
@@ -238,18 +238,8 @@
 		<script>
 			/*动画加载效果*/
 			new WOW().init();
-
-			/*logo墙点击放大效果*/
-			$(".partner-logo").hover(function() {
-				$(this).addClass('hover');
-			}, function() {
-				$(this).removeClass('hover');
-			})
-
-			/*$("#navbar li a").bind("click",function(){
-			    $("#navbar li").removeClass("current");
-			    $(this).parent().addClass("current");
-			})*/
+			localStorage.logo = "images/logo.jpg";
+			$("#logo1,#logo2").html('<img src='+localStorage.logo+'>');
 		</script>
 	</body>
 
