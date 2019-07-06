@@ -332,7 +332,7 @@ footer .footer-copyright {
 	display: block;
 	max-width: 76%;
 	height: auto;
-	margin: 0 auto;
+	margin: 1rem  auto 0;
 }
 
 .point-text h5 {
