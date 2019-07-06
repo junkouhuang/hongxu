@@ -80,7 +80,7 @@ a:active {
 #logo1{
 	position: absolute;
 	top: 0;
-	left: 140px;
+	right: 0;
 }
 
 #logo1 img{
@@ -94,7 +94,6 @@ a:active {
 
 .header {
 	margin-top: 80px;
-	overflow-x: hidden;
 }
 
 .navbar-center {
