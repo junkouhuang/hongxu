@@ -80,7 +80,7 @@ a:active {
 #logo1{
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 15rem;
 }
 
 #logo1 img{
