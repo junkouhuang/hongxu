@@ -165,7 +165,9 @@
 		<script src="js/main.js"></script>
 		<script>
 			/*动画加载效果*/
-			new WOW().init();
+			if(document.body.clientWidth>768){
+				new WOW().init();
+			}
 			localStorage.logo = "images/logo.jpg";
 			localStorage.bggrand = "images/brand-topBg.png";
 			$("#logo1,#logo2").html('<img src='+localStorage.logo+'>');
