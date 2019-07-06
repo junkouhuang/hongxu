@@ -89,6 +89,7 @@ a:active {
 
 .collapse_btn {
 	float: right;
+	position: relative;
 }
 
 .header {
