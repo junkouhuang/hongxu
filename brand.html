@@ -27,11 +27,11 @@
                 <span class="icon-bar"></span>
             </button>
 					<div id="logo1" class="logo pull-left" style="display:none;margin-left:25%">
-						<img logo page-scroll src="images/logo.jpg">
+						
 					</div>
 				</div>
 				<div id="logo2" class="logo pull-left">
-					<img logo page-scroll src="images/logo.jpg">
+					
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
@@ -55,8 +55,8 @@
 			</div>
 		</div>
 		<section class="header">
-			<div class="bg">
-				<img src="images/brand-topBg.png" alt="">
+			<div class="bg" id="bg">
+				
 			</div>
 		</section>
 		<section id="brand-cooperation">
@@ -166,11 +166,10 @@
 		<script>
 			/*动画加载效果*/
 			new WOW().init();
-
-			$("#navbar li a").bind("click", function() {
-				$("#navbar li").removeClass("current");
-				$(this).parent().addClass("current");
-			})
+			localStorage.logo = "images/logo.jpg";
+			localStorage.bggrand = "images/brand-topBg.png";
+			$("#logo1,#logo2").html('<img src='+localStorage.logo+'>');
+			$("#bg").html('<img src='+localStorage.bggrand+'>');
 		</script>
 	</body>
 
