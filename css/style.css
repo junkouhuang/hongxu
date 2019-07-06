@@ -2,7 +2,7 @@ body {
 	color: #676a6c;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 14px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .fl {
